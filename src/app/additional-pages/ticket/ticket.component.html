@@ -1,0 +1,158 @@
+<div class="hero">
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col">
+      <div id="card1" class="card">
+        <img id="img-card" src="../../../assets/img/jegyek/horgaszigazolvany.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{'title5' |translate}}</h5>
+          <p class="card-text">
+            {{'text' |translate}}
+          </p>
+          <button id="button1" class="btn btn-primary" type="button" data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling" (click)="openSpinner()">{{'buttonText' |translate}}</button>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div id="card2" class="card">
+        <img id="img-card" src="../../../assets/img/jegyek/jegyvásárlóhelyek.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{'title6' |translate}}</h5>
+          <p class="card-text">{{'text2' |translate}}
+          </p>
+          <button id="button2" class="btn btn-primary" type="button" data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasWithBackdrop" aria-controls="offcanvasWithBackdrop" (click)="openSpinner()">{{'buttonText2' |translate}}</button>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div id="card3" class="card">
+        <img id="img-card" src="../../../assets/img/jegyek/napijegyektablazat.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{'title7' |translate}}</h5>
+          <p class="card-text">{{'text3' |translate}}</p>
+          <button id="button3" class="btn btn-primary" type="button" data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions" (click)="openSpinner()">{{'buttonText3' |translate}}</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+
+
+
+  <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
+    id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasScrollingLabel">{{'title8' |translate}}</h5>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <mat-tab-group>
+        <mat-tab label="{{'label' |translate}}">
+
+          {{'content' |translate}}
+          <button id="button7" type="button" class="btn btn-primary" (click)="openSpinner()"><a
+              href="https://horgaszjegy.hu/ht/horgaszoknak/fooldal"> {{'buttonText4' |translate}}</a></button>
+
+        </mat-tab>
+        <mat-tab label="{{'label2' |translate}}">
+          {{'content2' |translate}}
+          <button id="button7" type="button" class="btn btn-primary" (click)="openSpinner()"><a
+              href="https://pecacsarnok.hu/horgaszvizsga-2024-a-horgassza-valas-lepesei/"> {{'buttonText5' |translate}}
+              </a></button>
+        </mat-tab>
+        <mat-tab label="{{'label3' |translate}}">
+          {{'content3' |translate}}
+          <button id="button8" type="button" class="btn btn-primary"(click)="openSpinner()"><a href="https://miklosihorgasz.hu/horgaszkartya/">
+            {{'buttonText6' |translate}}</a></button>
+        </mat-tab>
+      </mat-tab-group>
+
+    </div>
+  </div>
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasWithBackdrop"
+    aria-labelledby="offcanvasWithBackdropLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasWithBackdropLabel"><strong>{{'title9' |translate}}</strong> </h5>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+
+    </div>
+    <div class="offcanvas-body">
+      <mat-list role="list">
+        <mat-list-item role="listitem"><a id="helyek" href="http://www.fohesz.hu/oldal.php?oldal=egyesuletek">Budapest,
+            Avar utca 2
+          </a></mat-list-item>
+        <mat-list-item role="listitem"><a id="helyek"
+            href="https://portal.nebih.gov.hu/noveny-talaj-es-agrarkornyezet-vedelmi-igazgatosag">Budapest, Budaörsi út
+            141-145 </a></mat-list-item>
+        <mat-list-item role="listitem"><a id="helyek" href="http://hhnhe.hu/user"> Budapest, Korányi Sándor utca 4
+          </a></mat-list-item>
+        <mat-list-item role="listitem"><a id="helyek"
+            href="http://www.magyarszakmaitudakozo.hu/index.php/foldal/sport-sportegyesulet-spotszer-horgaszat/horgaszat/rakosmezeje-MGTSZ-horgaszgeyesulet-ecseri-horgaszto.html">Ecser,
+            Arany János utca 10 </a></mat-list-item>
+        <mat-list-item role="listitem"><a id="helyek" href="http://www.dubicstamas.battanet.hu/">Százhalombatta, Ifjúság
+            útja 7
+          </a></mat-list-item>
+        <mat-list-item role="listitem"><a id="helyek"
+            href="https://www.rdhsz.hu/index.php/24-tagegyesuleteink/56-vegyes-uzemi-dolgozok-he">Tököl, Kolozsvári utca
+            33 </a></mat-list-item>
+        <mat-list-item role="listitem"><a id="helyek" href="http://www.level.hu/leveli-horgaszegyesulet.html">Levél,
+            Alsófő utca 9
+          </a></mat-list-item>
+        <mat-list-item role="listitem"><a id="helyek" href="https://www.tokajikovacsto.hu/foglalas">Tokaj, Ladányi út 1
+          </a></mat-list-item>
+        <button id="button5" type="button" class="btn btn-primary" (click)="openSpinner()"><a
+            href="https://horgaszjegy.hu/ht/horgaszoknak/fooldal"> {{'buttonText7' |translate}}</a></button>
+      </mat-list>
+
+    </div>
+  </div>
+  <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions"
+    aria-labelledby="offcanvasWithBothOptionsLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">{{'title10' |translate}}</h5>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 demo-table">
+
+        <ng-container matColumnDef="demo-position">
+          <th mat-header-cell *matHeaderCellDef> No. </th>
+          <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+        </ng-container>
+
+
+        <ng-container matColumnDef="demo-name">
+          <th mat-header-cell *matHeaderCellDef> {{'header2'|translate}} </th>
+          <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+        </ng-container>
+
+
+        <ng-container matColumnDef="demo-discount">
+          <th mat-header-cell *matHeaderCellDef> {{'header3'|translate}} </th>
+          <td mat-cell *matCellDef="let element"> {{element.discount}} </td>
+        </ng-container>
+
+
+        <ng-container matColumnDef="demo-price">
+          <th mat-header-cell *matHeaderCellDef>{{'header4'|translate}} </th>
+          <td mat-cell *matCellDef="let element"> {{element.price}} </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+      <button id="button6" type="button" class="btn btn-primary" (click)="openSpinner()"><a
+          href="https://horgaszjegy.hu/ht/horgaszoknak/fooldal">
+          {{'buttonText8' |translate}}</a></button>
+
+
+    </div>
+  </div>
+</div>
+<ngx-spinner bdColor="rgba(51,51,51,0.8)" size="medium" color="#fff" type="ball-scale-multiple">
+  <p style="font-size: 20px; color: white">{{'loadingSpinnerText'|translate}}.</p>
+</ngx-spinner>

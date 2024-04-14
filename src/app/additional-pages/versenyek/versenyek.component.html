@@ -1,0 +1,35 @@
+<div class="hero">
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+
+        <ng-container matColumnDef="position">
+            <th mat-header-cell *matHeaderCellDef>{{'individualResultsTitle'|translate}}</th>
+            <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+        </ng-container>
+
+
+        <ng-container matColumnDef="name">
+            <th mat-header-cell *matHeaderCellDef>{{'name'|translate}} </th>
+            <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+        </ng-container>
+
+
+        <ng-container matColumnDef="country">
+            <th mat-header-cell *matHeaderCellDef> {{'country'|translate}} </th>
+            <td mat-cell *matCellDef="let element"> {{element.country}} </td>
+        </ng-container>
+
+        
+        <ng-container matColumnDef="score">
+            <th mat-header-cell *matHeaderCellDef>{{'score'|translate}}</th>
+            <td mat-cell *matCellDef="let element"> {{element.score}} </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+    <button type="button" class="btn btn-dark"><a
+            href="https://nyito.mohosz.hu/index.php/versenysport/59-ranglistak/486-nemzetkoezi-egyeni-ranglista">{{'internationalRankingButton'|translate}}
+            </a></button>
+    <button type="button" class="btn btn-dark"><a href="https://ranglista.mohosz.hu/">{{'domesticRankingButton'|translate}}</a></button>
+</div>

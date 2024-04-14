@@ -1,0 +1,26 @@
+<div class="hero">
+    
+<form >
+    <div class="row">
+        <div class="input-group">
+            <input type="text" id="name" required>
+            <label for="name"><i class="bi bi-person-fill"></i>{{'name'|translate}}</label>
+        </div>
+        <div class="input-group">
+            <input type="text" id="number" required>
+            <label for="number"><i class="bi bi-telephone-fill"></i>{{'phone'|translate}}</label>
+        </div>
+    </div>
+    
+    <div class="input-group">
+        <input type="email" id="email" required>
+        <label for="email"><i class="bi bi-envelope-check"></i>{{'email'|translate}}</label>
+    </div>
+    <div class="input-group">
+        <textarea id="message" rows="8" required></textarea>
+        <label for="message"><i class="bi bi-chat-dots-fill"></i>{{'message'|translate}}</label>
+    </div>
+    
+    <button (click)="sendMail()" type="button" class="btn btn-outline-primary">{{'sendButton'|translate}}</button>
+</form>
+</div>

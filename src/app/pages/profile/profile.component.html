@@ -1,0 +1,49 @@
+<div class="hero">
+  <div class="card" style="width: 18rem;">
+    
+      <div class="card-body">
+        <h5 class="card-title">{{'title4'|translate}}</h5>
+        
+        <div class="form-floating mb-3">
+          <input type="text" [(ngModel)]="regModel.username" class="form-control" id="username">
+          <label for="username">{{'usernamePlaceholder2'|translate}}</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input type="text" [(ngModel)]="regModel.firstName" class="form-control" id="firstName">
+          <label for="firstName">{{'firstNamePlaceholder'|translate}}</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input type="text" [(ngModel)]="regModel.lastName" class="form-control" id="lastNamee">
+          <label for="lastName">{{'lastNamePlaceholder'|translate}}</label>
+        </div>
+
+        <div class="form-floating mb-3">
+          <input [(ngModel)]="regModel.email" type="email" class="form-control" id="email" placeholder="name@example.com">
+          <label for="email">{{'emailPlaceholder'|translate}}</label>
+        </div>
+
+        <div class="form-floating mb-3">
+          <input type="text" [(ngModel)]="regModel.address" class="form-control" id="address">
+          <label for="address">{{'addressPlaceholder'|translate}}</label>
+        </div>
+
+        
+        <button (click)="update()" type="button" class="btn btn-primary mb-3">{{'updateButton'|translate}}</button>
+      
+        
+      <div class="form-floating">
+          <input [(ngModel)]="newPassword1" [type]="changetype?'password':'text'" class="form-control" id="password1" placeholder="Password">
+          <label for="password1">{{'passwordPlaceholder2'|translate}}</label>
+          <span class="eyeicon" (click)="viewpass()"><i [ngClass]="visible?'bi bi-eye':'bi bi-eye-slash'" style="font-size: 3em;"></i></span>
+        </div>
+      <div class="form-floating">
+          <input [(ngModel)]="newPassword2" [type]="changetype?'password':'text'" class="form-control" id="password2" placeholder="Password">
+          <label for="password2">{{'passwordPlaceholder3'|translate}}</label>
+          <span class="eyeicon" (click)="viewpass()"><i [ngClass]="visible?'bi bi-eye':'bi bi-eye-slash'" style="font-size: 3em;"></i></span>
+        </div>
+      <button (click)="changeMyPassword()" type="button" class="btn btn-primary mb-3">{{'changePasswordButton'|translate}}</button>
+      
+      
+      </div>
+    </div>
+</div>

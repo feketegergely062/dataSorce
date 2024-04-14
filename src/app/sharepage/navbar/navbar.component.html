@@ -1,0 +1,57 @@
+<nav class="navbar navbar-expand-lg  bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img src="../../../assets/img/navbar/logo.jpg" alt="Logo" width="30" height="24"
+        class="rounded-circle d-inline-block align-text-top">
+      MHEI
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link active" routerLink="fooldal" routerLinkActive="active-link"
+            [routerLinkActiveOptions]="{exact:true}" (click)="openSpinner()">{{'home2'| translate}}</a>
+        </li>
+        <li *ngIf="currentUser" class="nav-item">
+          <a class="nav-link" routerLink="jegy" routerLinkActive="active-link"
+            (click)="openSpinner()">{{'services'|translate}}</a>
+        </li>
+        <li *ngIf="currentUser" class="nav-item">
+          <a class="nav-link" routerLink="kornyezetvedelem" routerLinkActive="active-link"
+            (click)="openSpinner()">{{'environment2'|translate}}</a>
+        </li>
+        <li *ngIf="currentUser" class="nav-item">
+          <a class="nav-link" routerLink="kapcsolat" routerLinkActive="active-link"
+            (click)="openSpinner()">{{'contacts'|translate}}</a>
+        </li>
+        <li *ngIf="currentUser" class="nav-item">
+          <a class="nav-link" routerLink="profile" routerLinkActive="active-link"
+            (click)="openSpinner()">{{'profile'|translate}}</a>
+        </li>
+        <li *ngIf="currentUser?.claims.includes('SAdmin')" class="nav-item">
+          <a class="nav-link" routerLink="/user-list">{{'adminUsers'|translate}}</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="user-list" routerLinkActive="active-link">{{'users'|translate}}</a>
+        </li>
+        <li *ngIf="currentUser" class="nav-item">
+          <a class="nav-link" (click)="logout()">{{'logout' |translate}}</a>
+        </li>
+        <li class="nav-item">
+          <select class="form-select" (change)="ChangeLanguage($event)" name="" id="">
+            <option [selected]="lang==='hu'" value="hu">Magyar</option>
+            <option [selected]="lang==='en'" value="en">English</option>
+            <option [selected]="lang==='de'" value="de">Deutche</option>
+          </select>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<ngx-spinner bdColor="rgba(51,51,51,0.8)" size="medium" color="#fff" type="ball-scale-multiple">
+  <p style="font-size: 20px; color: white">{{'loadingSpinnerText'|translate}}.</p>
+</ngx-spinner>

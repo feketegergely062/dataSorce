@@ -1,0 +1,21 @@
+.alert {
+    background: #FAE6E6;
+    padding: .5em 1em 2em 2em;
+    margin: 0 0 0 0;
+    box-shadow: inset 6px 0 #CC0000;
+  }
+  
+  h4 {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: black;
+    letter-spacing: 0.02em;
+    margin-top: 1em;
+    margin-left: 2em;
+    margin-bottom: .5em;
+  }
+  
+  .alert_text {
+    margin-left: 3em;
+    margin-bottom: .5em;
+  }

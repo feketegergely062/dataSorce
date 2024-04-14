@@ -1,0 +1,42 @@
+.hero {
+  background-image: url('../../../assets/img/kornyezetvedelem/SF10.jpg');
+  width: 100%;
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#button1 {
+  float: right;
+  margin-right: -120px;
+}
+
+#button2 {
+  float: right;
+  margin-right: -170px;
+}
+
+#button3 {
+  float: right;
+  margin-right: -150px;
+}
+
+#button4 {
+  float: right;
+  margin-right: -170px;
+}
+
+
+
+a {
+  text-decoration: whitesmoke;
+  font-weight: bold;
+}
+
+img {
+  border: 5px solid black;
+  border-radius: 20px;
+}

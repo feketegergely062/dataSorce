@@ -1,0 +1,277 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" (click)="changeContent('ticket')">{{'tickets'|translate}}</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="changeContent('additional')">{{'additional'|translate}}</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="changeContent('fishing-shop')">{{'fishing-shop'|translate}}</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="changeContent('fish')">{{'fishSpecies'|translate}}</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="changeContent('events')">{{'events'|translate}}</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="changeContent('versenyek')">{{'competitions'|translate}}</a>
+        </li>
+
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Dynamically changing content based on menu click -->
+<div *ngIf="currentContent === 'ticket'">
+
+</div>
+
+
+<div *ngIf="currentContent === 'additional'">
+  <div class="hero-1">
+    <div class="row">
+      <div class="col-4">
+        <div class="list-group" id="list-tab" role="tablist">
+          <a class="list-group-item list-group-item-action active" id="list-home-list" data-bs-toggle="list"
+            href="#list-home" role="tab" aria-controls="list-home">{{'boat' |translate}}</a>
+          <a class="list-group-item list-group-item-action" id="list-profile-list" data-bs-toggle="list"
+            href="#list-profile" role="tab" aria-controls="list-profile">{{'fishscaler'|translate}}</a>
+          <a class="list-group-item list-group-item-action" id="list-messages-list" data-bs-toggle="list"
+            href="#list-messages" role="tab" aria-controls="list-messages">{{'hooktier'|translate}}</a>
+          <a class="list-group-item list-group-item-action" id="list-settings-list" data-bs-toggle="list"
+            href="#list-settings" role="tab" aria-controls="list-settings">{{'scale'|translate}}</a>
+
+        </div>
+      </div>
+      <div class="col-8">
+        <div class="tab-content" id="nav-tabContent">
+          <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">
+            <img id="additionalId" src="../../../assets/img/kiegeszitok/csonak.jpg" alt="">
+            <button id="button1" type="button" class="btn btn-outline-primary"><a
+                href="https://kolibricsonakok.hu/Kolibri-KM-380CM-katamaran-csonak">{{'buy' |translate}}</a> </button>
+          </div>
+          <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">
+            <img id="additionalId" src="../../../assets/img/kiegeszitok/Halpikkelyező.jpg" alt="">
+            <button id="button2" type="button" class="btn btn-outline-primary"><a
+                href="https://www.haldorado.hu/termekek/kiegeszito-kellek-c7/halpucolo-eszkozok-c251/dick-halpikkelyezo-i36392">Megveszem</a>
+            </button>
+          </div>
+
+          <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">
+            <img id="additionalId" src="../../../assets/img/kiegeszitok/hurokkoto.jpg" alt="">
+            <button id="button3" type="button" class="btn btn-outline-primary"><a
+                href="https://www.haldorado.hu/termekek/kiegeszito-kellek-c7/horogszabadito-es-csomokoto-c115/preston-floater-loop-sizer-hurokkoto-i33408">
+                Megveszem</a></button>
+          </div>
+
+          <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list">
+
+            <img id="additionalId" src="../../../assets/img/kiegeszitok/merleg.jpg" alt="">
+            <button id="button4" type="button" class="btn btn-outline-primary"><a
+                href="https://www.haldorado.hu/termekek/kiegeszito-kellek-c7/merleg-c118/by-dome-team-feeder-elektromos-merleg-50-kg-i38759">
+                Megveszem</a></button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div *ngIf="currentContent === 'fish'">
+  <!-- Tartalom a ticket menüpontnak megfelelően -->
+</div>
+
+
+
+<div *ngIf="currentContent === 'events'">
+  <div class="hero">
+    <div class="container">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">{{"events2"|translate}}</th>
+            <th scope="col"> {{"descriptions"|translate}}</th>
+            <th scope="col">{{"picture"|translate}}</th>
+            <th scope="col">{{"Link"|translate}}</th>
+          </tr>
+        </thead>
+        <tbody class="blue-bg">
+          <tr>
+            <th scope="row">{{"location1"|translate}}</th>
+            <td> {{"description2"|translate}}
+            </td>
+            <td><img src="../../../assets/img/esemenyek/komaromito.jpg" alt=""></td>
+            <td><button id="button1" type="button" class="btn btn-outline-primary"><a
+                  href="https://www.programturizmus.hu/ajanlat-komarom-horgaszat.html">{{"button1"|translate}}</a></button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">{{"location2"|translate}}</th>
+            <td>
+              {{"description3"|translate}}
+            </td>
+            <td><img src="../../../assets/img/esemenyek/roszke.jpg" alt=""></td>
+            <td><button id="button2" type="button" class="btn btn-outline-primary"><a
+                  href="https://www.programturizmus.hu/ajanlat-horgaszverseny-roszke.html">{{"button2"|translate}}</a></button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">{{"location3"|translate}}</th>
+            <td>{{"description4"|translate}}
+            </td>
+
+            <td><img src="../../../assets/img/esemenyek/siofok.jpg" alt=""></td>
+            <td> <button id="button3" type="button" class="btn btn-outline-primary"><a
+                  href="https://www.programturizmus.hu/ajanlat-pontyfogo-kupa.html">{{"button3"|translate}}</a></button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">{{"location4"|translate}}</th>
+            <td>{{"description5"|translate}}
+            </td>
+            <td> <img src="../../../assets/img/esemenyek/Batonyterenyei.jpg" alt=""></td>
+            <td><button id="button4" type="button" class="btn btn-outline-primary"><a
+                  href="https://www.programturizmus.hu/ajanlat-maconkai-viztarozo-horgaszversenyek.html">{{"button4"|translate}}</a></button>
+            </td>
+
+          </tr>
+          <tr>
+            <th scope="row">{{"location5"|translate}}</th>
+            <td> {{"description6"|translate}}
+            </td>
+            <td><img src="../../../assets/img/esemenyek/Bogacs.jpg" alt=""></td>
+            <td> <button id="button5" type="button" class="btn btn-outline-primary"><a
+                  href="https://www.programturizmus.hu/ajanlat-horgaszverseny-es-horgasztalalkozo-bogacs.html">{{"button5"|translate}}</a></button>
+            </td>
+
+          </tr>
+          <tr>
+            <th scope="row">{{"location6"|translate}}</th>
+            <td>
+              {{"description7"|translate}}
+            </td>
+            <td><img src="../../../assets/img/esemenyek/szekesfehervari.jpg" alt=""></td>
+            <td> <button id="button6" type="button" class="btn btn-outline-primary"><a
+                  href="https://www.programturizmus.hu/ajanlat-fehervari-halunnep.html">{{"button6"|translate}}</a></button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">{{"location7"|translate}}</th>
+            <td>
+              {{"description8"|translate}}
+            </td>
+            <td><img src="../../../assets/img/esemenyek/Hortobagyi-halasto.jpeg" alt=""></td>
+
+            <td> <button id="button7" type="button" class="btn btn-outline-primary"><a
+                  href="https://www.programturizmus.hu/ajanlat-hortobagyi-halasto.html">{{"button7"|translate}}</a></button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="currentContent === 'fishing-shop'">
+  <div class="hero-4">
+    <h1>{{ 'horgaszboltok.title' | translate }}</h1>
+
+    <div class="horgaszbolt1">
+      <iframe id="maps1"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2697.494063818365!2d19.146451476770405!3d47.460800898033774!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4741c2e0e4047bc5%3A0xd2d782deb23cccd9!2sDupla%20Kukac%20Horg%C3%A1szbolt%20%C3%A9s%20Horg%C3%A1szegyes%C3%BClet!5e0!3m2!1shu!2shu!4v1711575095538!5m2!1shu!2shu"
+        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <h2>{{'horgaszbolt1.name' |translate}} </h2>
+      <h3>{{ 'horgaszbolt1.address' | translate }}</h3>
+      <h3>{{ 'horgaszbolt1.phone' | translate }}</h3>
+      <button id="button5" type="button" class="btn btn-outline-primary"><a
+          href="https://www.duplakukachorgaszbolt.hu/"> {{ 'horgaszbolt1.buttonText' | translate }}</a></button>
+      <img id="img1" src="../../../assets/img/horgaszboltok/duplakukachorgaszbolt.jpeg" alt="">
+    </div>
+
+
+    <div class="horgaszbolt2">
+      <iframe id="maps2"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2695.393628924597!2d19.078834676772246!3d47.501724895213215!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4741dc628bb502b7%3A0xbc6572a1f80bedc0!2sKeleti%20Horg%C3%A1szbolt!5e0!3m2!1shu!2shu!4v1711578325381!5m2!1shu!2shu"
+        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <h2> {{'horgaszbolt1.name' |translate}}</h2>
+      <h3>{{ 'horgaszbolt1.address' | translate }}</h3>
+      <h3>{{ 'horgaszbolt1.phone' | translate }}</h3>
+      <button id="button6" type="button" class="btn btn-outline-primary"><a href="http://keletihb.hu/">{{
+          'horgaszbolt1.buttonText' | translate }}</a></button>
+      <img id="img2" src="../../../assets/img/horgaszboltok/keleti.png" alt="">
+    </div>
+
+    <div class="horgaszbolt3">
+      <iframe id="maps3"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2695.7099317963266!2d19.07155487677195!3d47.49556389563813!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4741dc609ca5db5f%3A0x44a60617f143b2bb!2sKaland%20Horg%C3%A1szbolt%20Sephia%20Bt.!5e0!3m2!1shu!2shu!4v1711577110293!5m2!1shu!2shu"
+        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <h2>{{'horgaszbolt1.name' |translate}}</h2>
+      <h3>{{ 'horgaszbolt1.address' | translate }}</h3>
+      <h3>{{ 'horgaszbolt1.phone' | translate }}</h3>
+      <button id="button7" type="button" class="btn btn-outline-primary"><a href="https://www.kalandhorgaszbolt.hu/">{{
+          'horgaszbolt1.buttonText' | translate }}</a></button>
+      <img id="img3" src="../../../assets/img/horgaszboltok/Kaland.jpeg" alt="">
+    </div>
+
+  </div>
+</div>
+
+
+
+<div *ngIf="currentContent === 'versenyek'">
+  <div class="hero-3">
+    <table mat-table [dataSource]="dataSource1" class="mat-elevation-z8">
+
+
+      <ng-container matColumnDef="position">
+        <th mat-header-cell *matHeaderCellDef>{{'individualResultsTitle'|translate}}</th>
+        <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+      </ng-container>
+
+
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef>{{'name'|translate}} </th>
+        <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+      </ng-container>
+
+
+      <ng-container matColumnDef="country">
+        <th mat-header-cell *matHeaderCellDef> {{'country'|translate}} </th>
+        <td mat-cell *matCellDef="let element"> {{element.country}} </td>
+      </ng-container>
+
+
+      <ng-container matColumnDef="score">
+        <th mat-header-cell *matHeaderCellDef>{{'score'|translate}}</th>
+        <td mat-cell *matCellDef="let element"> {{element.score}} </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns1"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns1;"></tr>
+    </table>
+    <button id="versenybutton1" type="button" class="btn btn-dark"><a id="gomb"
+        href="https://nyito.mohosz.hu/index.php/versenysport/59-ranglistak/486-nemzetkoezi-egyeni-ranglista">{{'internationalRankingButton'|translate}}
+      </a></button>
+    <button id="versenybutton1" type="button" class="btn btn-dark"><a id="gomb"
+        href="https://ranglista.mohosz.hu/">{{'domesticRankingButton'|translate}}</a></button>
+  </div>
+</div>
+
+
+
+
+
+<ngx-spinner bdColor="rgba(51,51,51,0.8)" size="medium" color="#fff" type="ball-scale-multiple">
+  <p style="font-size: 20px; color: white">{{'loadingSpinnerText'|translate}}.</p>
+</ngx-spinner>
